@@ -20,3 +20,10 @@ $ curl http://localhost:8080/whoami/Mr_Pink
  
  
  https://github.com/spring-cloud/spring-cloud-commons
+ 
+ 
+ $ curl http://root:s3cr3t@localhost:8888/config-client/development/master
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   301    0   301    0     0    150      0 --:--:--  0:00:02 --:--:--   148{"name":"config-client","profiles":["development"],"label":"master","version":"6f95d6e2b8b24a508cdb6c1506227244cba9b5ec","state":null,"propertySources":[{"name":"https://github.com/mxcheung/springcloud/config-client-development.properties","source":{"user.role":"Developer","user.password":"d3v3L"}}]}
+ 
