@@ -18,13 +18,18 @@ public class ConfigClient extends SpringBootServletInitializer {
 	@Value("${user.role}")
 	private String role;
 
+	@Value("${user.password}")
+	private String password;
+
 	public static void main(String[] args) {
 		SpringApplication.run(ConfigClient.class, args);
 	}
 
 	@RequestMapping(value = "/whoami/{username}", method = RequestMethod.GET, produces = MediaType.TEXT_PLAIN_VALUE)
 	public String whoami(@PathVariable("username") String username) {
-		return String.format("Hello!  You're %s and you'll become a(n) %s...\n", username, role);
+		return String.format(
+				"Hello! You're %s and you'll become a(n) %s, " + "but only if your password is '%s'!\n",
+				username, role, password);
 	}
 
 	@Override
