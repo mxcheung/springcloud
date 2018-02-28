@@ -20,7 +20,7 @@ public class SwaggerConfig {
 
     @Bean
     public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2).groupName("FileIngestor").forCodeGeneration(true).select().apis(RequestHandlerSelectors.any())
+        return new Docket(DocumentationType.SWAGGER_2).groupName("SpringCloud").forCodeGeneration(true).select().apis(RequestHandlerSelectors.any())
                 .paths(getPaths()).build();
     }
 
