@@ -47,3 +47,6 @@ public class EncryptionTest   {
     }
 
 }
+
+
+http://localhost:8888/config-client/development
