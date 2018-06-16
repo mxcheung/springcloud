@@ -30,6 +30,11 @@ public class BookServiceApplication {
 	@Value("${spring.sleuth.web.skipPattern}")
 	private String skipPattern;
 
+	
+	@Value("${spring.bookservice}")
+	private String bookservice;
+
+	
 	// @Autowired
 	private RestTemplate restTemplate = new RestTemplate();
 
